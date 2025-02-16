@@ -1,1 +1,1 @@
-Will have more content
+Currently working on getting minecraft-discord communication set up
