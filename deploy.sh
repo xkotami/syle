@@ -1,1 +1,1 @@
-node deploy-commands.js
+cd ./src && node deploy-commands.js

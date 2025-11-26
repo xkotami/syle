@@ -10,6 +10,8 @@
   "dependencies": {
     "discord.js": "^14.17.3",
     "dotenv": "^16.4.7",
-    "minecraft-server-util": "^5.4.4"
+    "minecraft-server-util": "^5.4.4",
+    "rcon-client": "^4.2.5",
+    "tail": "^2.2.6"
   }
 }
