@@ -25,7 +25,7 @@ module.exports = {
             const response = await util.status(ip, port);
             console.log(response);
             const playerNames = response.players.sample.map(player => player.name).join(", ");
-            const statusMessage = `**${ip}** is **online** 🟢\n- **Players**: ${playerNames}\n- **Version**: ${response.version.name} \n- **Ping**: ${response.roundTripLatency}\n- **MOTD**: ${response.motd.clean}`;
+            const statusMessage = `**${ip}** is **online** 🟢\n- **Players**: ${playerNames ? playerNames : "None"}\n- **Version**: ${response.version.name} \n- **Ping**: ${response.roundTripLatency}\n- **MOTD**: ${response.motd.clean}`;
             await interaction.editReply(statusMessage);
         } catch (error) {
             await interaction.editReply(`❌ Could not reach **${ip}**. Server might be offline HEEEEELP`);
