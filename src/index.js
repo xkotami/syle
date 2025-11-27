@@ -64,10 +64,12 @@ client.on("messageCreate", async (message) => {
 
     try {
         const rcon = await Rcon.connect(RCON_CONFIG);
+        console.log(tellraw);
         await rcon.send(tellraw);
         await rcon.end();
     } catch (error) {
         console.error("RCON Failed:", error);
+        console.log(error);
         await message.react('❌');
     }
 
