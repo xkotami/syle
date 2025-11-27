@@ -12,7 +12,9 @@ const RCON_CONFIG = {
 };
 
 const client = new Client({
-    intents: [GatewayIntentBits.Guilds]
+    intents: [GatewayIntentBits.Guilds,
+    	GatewayIntentBits.GuildMessages,
+    	GatewayIntentBits.MessageContent]
 });
 
 client.commands = new Collection();
@@ -50,6 +52,8 @@ client.on("messageCreate", async (message) => {
     //ignore bot message
     if (message.author.bot) return;
     if (message.channelId !== process.env.CHANNEL_ID) return;
+    console.log("messageCreate started");
+
 
     // send to RCON
     const content = message.content;
@@ -86,7 +90,7 @@ tail.on("line", (data) => {
         const channel = client.channels.cache.get(process.env.CHANNEL_ID);
         if (channel) {
             if (username === "Server") return;
-            channel.send(`${username}: ${message}`);
+            channel.send(`[Minecraft] **${username}**: ${message}`);
         }
     }
 });

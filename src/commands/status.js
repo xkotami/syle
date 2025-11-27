@@ -28,7 +28,7 @@ module.exports = {
             const statusMessage = `**${ip}** is **online** 🟢\n- **Players**: ${playerNames}\n- **Version**: ${response.version.name} \n- **Ping**: ${response.roundTripLatency}\n- **MOTD**: ${response.motd.clean}`;
             await interaction.editReply(statusMessage);
         } catch (error) {
-            await interaction.editReply(`❌ Could not reach **${ip}**. Server might be offline.`);
+            await interaction.editReply(`❌ Could not reach **${ip}**. Server might be offline HEEEEELP`);
         }
     },
 }
