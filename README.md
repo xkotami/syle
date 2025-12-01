@@ -1,1 +1,2 @@
-Currently working on getting minecraft-discord communication set up
+**Status**
+Communications have been set up! Only for coders who also have access to the server though :D
